@@ -273,15 +273,69 @@ h3 {
 }
 
 .service-card.compact h3 {
-  font-size: 1.55rem;
+  font-size: 1.18rem;
+  line-height: 1.25;
 }
 
 .service-card.compact p {
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.9rem;
   color: #ffffff3d;
   font-weight: 600;
+}
+
+.home-services-grid {
+  gap: 0;
+}
+
+.home-service-card {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 22, 60, 0.42);
+}
+
+.home-service-card img {
+  height: 100%;
+  min-height: 320px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-service-card .service-bg-number {
+  position: absolute;
+  inset: auto auto 50% 50%;
+  transform: translate(-50%, 50%);
+  margin: 0;
+  padding: 0;
+  font-size: clamp(4rem, 10vw, 6.4rem);
+  color: rgba(255, 255, 255, 0.22);
+  font-weight: 700;
+  line-height: 1;
+  z-index: 2;
+}
+
+.home-service-card h3 {
+  position: absolute;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1.15;
+  z-index: 3;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .consultation {
@@ -408,8 +462,17 @@ footer a:hover {
   border-bottom: none;
 }
 
+.home-page .site-header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  border-bottom: none;
+}
+
 .about-live .site-header.about-header .brand,
-.about-live .site-header.about-header .nav-links a {
+.about-live .site-header.about-header .nav-links a,
+.home-page .site-header .brand,
+.home-page .site-header .nav-links a {
   color: #fff;
 }
 
@@ -657,6 +720,10 @@ footer a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .home-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero {
     min-height: 440px;
   }
@@ -682,6 +749,11 @@ footer a:hover {
   }
 
   .about-live .site-header.about-header {
+    position: static;
+    background: #0f1f60;
+  }
+
+  .home-page .site-header {
     position: static;
     background: #0f1f60;
   }
@@ -721,6 +793,10 @@ footer a:hover {
   }
 
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-services-grid {
     grid-template-columns: 1fr;
   }
 
