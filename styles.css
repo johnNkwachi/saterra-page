@@ -8,16 +8,19 @@
   --accent: #ef6a22;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto+Slab:wght@400;600&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+  font-size: 16px;
 }
 
 .container {
@@ -51,12 +54,14 @@ body {
   gap: 0.6rem;
   color: var(--primary);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.22rem;
+  letter-spacing: 0.01em;
 }
 
 .brand img {
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
@@ -77,21 +82,23 @@ body {
   align-items: center;
   background:
     linear-gradient(rgba(8, 19, 72, 0.72), rgba(8, 19, 72, 0.72)),
-    url("assets/images/hero-energy.jpg") center/cover no-repeat;
+    url("assets/images/saldest/oil-platform-surrounded-by-supply-boats-ocean-showcasing-industry-activity-scaled.jpg") center/cover no-repeat;
 }
 
 .hero-content h1 {
   margin: 0;
   max-width: 860px;
   color: #fff;
-  font-size: clamp(2rem, 4.5vw, 3.3rem);
-  line-height: 1.15;
+  font-size: clamp(2rem, 3.9vw, 3.9rem);
+  line-height: 1.08;
+  font-family: "Roboto Slab", serif;
 }
 
 .hero-content p {
   color: #e6ebff;
   max-width: 800px;
   margin: 1rem 0 0;
+  font-size: 1.02rem;
 }
 
 .btn {
@@ -103,6 +110,10 @@ body {
   padding: 0.65rem 1rem;
   border-radius: 8px;
   font-weight: 700;
+}
+
+.read-more-btn {
+  margin-top: 0.4rem;
 }
 
 .hero-actions {
@@ -125,13 +136,86 @@ body {
   padding: 4rem 0;
 }
 
+.section-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b749b;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-copy {
+  max-width: 760px;
+}
+
+.about-image-wrap {
+  border: 4px solid var(--accent);
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.about-image {
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.about-company-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.about-company-image-wrap {
+  border: 4px solid var(--accent);
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.about-company-image {
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 8px;
+  display: block;
+}
+
+.about-company-copy {
+  max-width: 720px;
+}
+
 h2 {
   margin: 0 0 0.6rem;
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.65rem);
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 1.1rem;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-family: "Roboto Slab", serif;
+  line-height: 1.15;
 }
 
 h3 {
   margin: 0 0 0.45rem;
+  font-size: 1.45rem;
+  font-family: "Roboto Slab", serif;
 }
 
 .feature {
@@ -139,7 +223,7 @@ h3 {
   border-block: 1px solid var(--line);
 }
 
-.card-grid {
+.services-grid {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -155,7 +239,7 @@ h3 {
 
 .service-card img {
   width: 100%;
-  height: 190px;
+  height: 220px;
   object-fit: cover;
   display: block;
 }
@@ -174,27 +258,374 @@ h3 {
   color: var(--muted);
 }
 
-.faq-item {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
-  background: #fff;
-  margin-top: 0.8rem;
+.service-card.compact h3 {
+  font-size: 1.55rem;
 }
 
-.faq-item p {
-  margin: 0;
-  color: var(--muted);
+.service-card.compact p {
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 1.1rem;
+  color: #ffffff3d;
+  font-weight: 600;
+}
+
+.consultation {
+  color: #fff;
+  background:
+    linear-gradient(rgba(20, 8, 100, 0.84), rgba(20, 8, 100, 0.84)),
+    url("assets/images/saldest/supply-vessels1.png") center/cover no-repeat;
+}
+
+.consultation p {
+  color: #d6dcff;
+}
+
+.hse {
+  background: #fff;
+  color: var(--text);
+}
+
+.hse-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hse-image-wrap {
+  border: 4px solid var(--accent);
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.hse-image {
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.hse-copy h5 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #1d2f72;
+}
+
+.hse-copy p {
+  color: #223366;
 }
 
 footer {
   background: #091648;
   color: #d9e1ff;
-  padding: 2.2rem 0;
+  padding: 2.4rem 0 1.1rem;
 }
 
-footer p {
-  margin: 0.2rem 0;
+.footer-top {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-top p {
+  margin: 0;
+  max-width: 760px;
+}
+
+.footer-grid {
+  padding-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+footer h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.05rem;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #fff;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer li {
+  margin: 0.35rem 0;
+  color: #d9e1ff;
+  font-size: 0.96rem;
+}
+
+footer a {
+  color: #d9e1ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.about-live .site-header.about-header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  border-bottom: none;
+}
+
+.about-live .site-header.about-header .brand,
+.about-live .site-header.about-header .nav-links a {
+  color: #fff;
+}
+
+.about-hero {
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 6.2rem;
+  background:
+    linear-gradient(rgba(1, 7, 37, 0.56), rgba(1, 7, 37, 0.56)),
+    url("https://saldestlimited.com/wp-content/uploads/2025/02/606df295bef9cfe20b3e2a1b_supply-header.jpg") center/cover no-repeat;
+}
+
+.about-hero h1 {
+  color: #fff;
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.about-who,
+.about-values,
+.about-hse {
+  background: #f3f4f6;
+}
+
+.about-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+.split-image-frame {
+  border: 4px solid var(--accent);
+  background: #fff;
+  padding: 0.75rem;
+}
+
+.split-image {
+  width: 100%;
+  height: 100%;
+  max-height: 640px;
+  object-fit: cover;
+  display: block;
+}
+
+.split-copy {
+  padding: 1.8rem 0;
+}
+
+.split-copy h2 {
+  font-size: clamp(2.1rem, 3vw, 2.95rem);
+  margin-bottom: 0.4rem;
+  color: #1d1e22;
+}
+
+.split-copy h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.09em;
+  color: #2e3b6e;
+}
+
+.split-copy p {
+  color: #3a4257;
+  font-size: 1.02rem;
+}
+
+.about-divider {
+  width: 52px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 4px;
+  margin: 0.75rem 0 1rem;
+}
+
+.about-vision-mission {
+  background:
+    linear-gradient(rgba(1, 3, 100, 0.8), rgba(1, 3, 100, 0.8)),
+    url("https://saldestlimited.com/wp-content/uploads/2025/03/Banner-3-min.jpg") top center/cover no-repeat;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+.vm-card {
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0.6rem;
+}
+
+.vm-card .about-divider {
+  margin-inline: auto;
+}
+
+.vm-card h2 {
+  color: #fff;
+}
+
+.vm-card p {
+  color: #e5e8ff;
+  font-size: 1.02rem;
+}
+
+.about-values h2 {
+  color: #1d1e22;
+}
+
+.about-values > .container > p {
+  color: #5b647f;
+}
+
+.value-card-grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.value-card {
+  background: #fff;
+  border: 1px solid #e8eaf1;
+}
+
+.value-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.value-content {
+  padding: 1.1rem 1.35rem 1.5rem;
+}
+
+.value-content h3 {
+  font-size: 1.95rem;
+  color: #171a21;
+  margin-bottom: 0.55rem;
+}
+
+.value-content p {
+  color: #4c5366;
+}
+
+.services-live .site-header.about-header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  border-bottom: none;
+}
+
+.services-live .site-header.about-header .brand,
+.services-live .site-header.about-header .nav-links a {
+  color: #fff;
+}
+
+.services-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 5rem;
+  background:
+    linear-gradient(rgba(1, 7, 37, 0.58), rgba(1, 7, 37, 0.58)),
+    url("https://saldestlimited.com/wp-content/uploads/2025/02/supply-vessels1.png") center/cover no-repeat;
+}
+
+.services-hero h1 {
+  color: #fff;
+  margin: 0;
+  font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+}
+
+.services-page-intro {
+  background: #f3f4f6;
+}
+
+.services-page-intro p {
+  color: #4a536c;
+}
+
+.services-page-list {
+  background: #f3f4f6;
+  padding-top: 0.6rem;
+}
+
+.services-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.service-detail-card {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  background: #fff;
+  border: 1px solid #e5e9f3;
+}
+
+.service-detail-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-detail-content {
+  padding: 1rem 1.25rem 1.2rem;
+}
+
+.service-num {
+  margin: 0 0 0.3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e2f7e;
+}
+
+.service-detail-content h3 {
+  margin-bottom: 0.45rem;
+  color: #1f253a;
+  font-size: 2rem;
+}
+
+.service-detail-content p {
+  color: #4d566e;
 }
 
 @media (max-width: 900px) {
@@ -208,18 +639,75 @@ footer p {
     flex-wrap: wrap;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero {
     min-height: 440px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    max-height: 420px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hse-image {
+    max-height: 420px;
+  }
+
+  .about-live .site-header.about-header {
+    position: static;
+    background: #0f1f60;
+  }
+
+  .about-hero {
+    min-height: 360px;
+    padding-bottom: 3rem;
+  }
+
+  .services-live .site-header.about-header {
+    position: static;
+    background: #0f1f60;
+  }
+
+  .services-hero {
+    min-height: 320px;
+    padding-bottom: 2.5rem;
+  }
+
+  .about-split,
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 560px) {
   .container {
     width: min(1120px, calc(100% - 1.2rem));
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
   .btn {
@@ -229,6 +717,22 @@ footer p {
 
   .hero-actions {
     display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-company-image {
+    max-height: 420px;
+  }
+
+  .value-card-grid {
     grid-template-columns: 1fr;
   }
 }
